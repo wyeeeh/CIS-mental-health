@@ -1,0 +1,290 @@
+<html>
+<head>
+    <title>Mental Cares</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@1&display=swap" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet" />
+
+    <script src="./js/scroll.js"></script>
+</head>
+<body>
+
+<div class="main">
+    <div class="headline-container">
+        <div class="headline">
+            Culture Matters:
+        </div>
+        <div class="sub-headline">
+            What prevents Chinese international students from seeking mental health support?
+        </div>
+    </div>
+    <div class="tipbox">
+        Over the past two decades, there’re millions of students overseas flooding into United States to seek higher education.
+    </div>
+
+    <div class="flex-container">
+        <div class="chart-container" style="grid-column: 1">
+            <div class="chart-title">
+                <embed src="./img/grad.svg" height="25px" type="image/svg+xml"/>
+                <span>Origin of International Students Seeking Higher Education in the US</span>
+            </div>
+            <div class="flourish-embed flourish-slope chart" data-src="visualisation/15448150" data-width="850px">
+                <script src="./js/flourish.js"></script>
+            </div>
+        </div>
+
+
+        <div class="tipbox" style="grid-column: 2">
+            Among them, international student from China emerged as the largest group, now compromising 31% of the total international student population in the US, up from 11% in 2001.
+        </div>
+
+        <div class="chart-container" style="grid-column: 1">
+            <div class="flourish-embed flourish-chart chart" data-src="visualisation/15448100" data-width="850px" data-height="300px">
+                <script src="./js/flourish.js"></script>
+            </div>
+            <div class="caption">Source: <a class="caption" href="https://opendoorsdata.org/data/international-students/all-places-of-origin/" target="_blank" >Institute of International Education. (2023). The Open Doors Report on International Educational Exchange.</a></div>
+        </div>
+    </div>
+
+    <div class="tipbox">
+        Compared to local students, Chinese international students are facing more impediments to maintaining their mental health. As the minority on campus, they may face challenges and stress when living and studying far from their home country.
+    </div>
+
+    <div class="chart-container">
+        <div class="chart-title">
+            😢 Chinese International Students Reported Higher Depression & Anxiety Rate but Lower Support Seeking Rate
+        </div>
+        <embed src="./img/dumbbell_plot.svg" type="image/svg+xml"/>
+        <div class="caption">Source: <a class="caption" href="https://www.acha.org/documents/ncha/ACHA-NCHA_Reference_Group_Report_Fall2009.pdf" target="_blank" >American College Health Association (2010). National College Health Assessment II: Reference Group Data Report Fall 2009.</a>
+            <br />
+            <a class="caption" href="https://doi.org/10.1080/07448481.2012.738267" target="_blank" >Han, X., Han, X., Luo, Q., Jacobs, S., & Jean-Baptiste, M. (2013). Report of a Mental Health Survey Among Chinese International Students at Yale University. Journal of American College Health, 61(1), 1–8.</a>
+        </div>
+    </div>
+    
+    <div class="tipbox" style="display: inline;">
+        A more worrying fact is that while mental health challenges are more prevalent among Chinese international students on average, they <span id="underline">underutilize</span> campus mental health care services.
+    </div>
+
+    <div class="tipbox" style="display: inline;">
+        Chinese international students have been proposed to be affected by difficulties with communication, social connectedness, homesickness, acculturative difficulties, and racism.
+    </div>
+</div>
+
+
+
+<div class="img-container">
+    <embed src="./img/emotion.svg" class="bg-img" type="image/svg+xml"/>
+</div>
+</body>
+<style>
+    body{
+        background-color: #FFF;
+        font-family: 'Roboto','Playfair Display', 'Inter',"Helvetica", "Arial", sans-serif;
+        font-size: 15px;
+        height: 100%;
+        width: 95%;
+        margin: 0;
+        padding: 1.5em;
+        color: #202020;
+        transition: background-color 0.1s ease; /* 添加过渡效果 */
+    }
+
+
+
+    .main{
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headline-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 0 0;
+    }
+    
+    .headline{
+        height: 1.8em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+        font: italic 900 5em "Playfair Display", -apple-system, 'Inter', "Roboto", "Helvetica", sans-serif;
+    }
+
+    .sub-headline {
+        height: 1.8em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+        font: italic 200 2.5em "Roboto", sans-serif;
+    }
+
+    @media (max-width: 991px) {
+        .headline {
+            max-width: 100%;
+            font-size: 4em;
+            white-space: initial;
+        }
+        .sub-headline {
+            max-width: 100%;
+            font-size: 1.5em;
+            white-space: initial;
+        }
+}
+
+    .img-container {
+        position: relative;
+        z-index: 0;
+        display: flex;
+    }
+    .bg-img {
+      position: fixed;
+      top: 100px;   /* 50px above the page */
+      right: -200px; /* 400px on the right side (negative value) */ 
+      overflow: hidden;
+      z-index: -1;
+    }
+
+
+    .tipbox {
+        margin: 6em 0 6em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(217, 217, 217, 0.5);
+        padding: 1em;
+        width: 600px;
+        border-top-left-radius: 0.8em;
+        border-top-right-radius: 0.8em;
+        border-bottom-left-radius: 0.8em;
+        border-bottom-right-radius: 0.8em;
+        overflow: hidden;
+        font: 400 1.25em "Roboto", sans-serif;
+    }
+
+    .tipbox > span {
+        position: relative;
+        display: inline-block;
+        /* transition: font-weight 0.8s ease;  */
+        /* transition: color 0.8s ease; */
+
+    }
+    .tipbox > span::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #C11F1F;
+        transition: width 0.8s ease; /* 添加过渡效果 */
+    }
+
+    .tipbox .underline {
+        font-style: italic; 
+        font-weight: 900; 
+        color: #C11F1F; 
+
+    }
+
+    .tipbox .underline::before {
+      width: 100%;
+    }
+
+    .flex-container {
+        display: grid;
+        grid-template-columns: 1.4fr 0.6fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chart-container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2em;
+        padding: 1em 0 1em 0;
+        /* min-width: 950px; */
+        /* background: rgba(217, 217, 217, 0.5);
+        padding: 1em;
+        width: 600px;
+        border-top-left-radius: 0.8em;
+        border-top-right-radius: 0.8em;
+        border-bottom-left-radius: 0.8em;
+        border-bottom-right-radius: 0.8em;
+        overflow: hidden;
+        font: 400 1.2em "Roboto", sans-serif; */
+    }
+
+
+    .chart-title {
+        grid-row: 1;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font: 800 1.8em "Roboto", sans-serif;
+    }
+
+    .chart-title embed {
+        grid-column: 1;
+        margin: 0 0.5em 0 0;
+    }
+
+    .chart-title span {
+        grid-column: 2;
+    }
+
+    .chart {
+        padding: 0;
+    }
+
+    .caption {
+        font: 300 1.05em "Roboto", sans-serif;
+        font-style: italic;
+        color: #202020;
+        text-decoration: none;
+        line-height: 1.5em;
+    }
+
+    a:hover {
+        cursor: pointer;
+        /* font-weight: 400; */
+    }
+
+    a:active {
+        /* font: 400 1.1em "Roboto", sans-serif;
+        font-style: italic; */
+        color: #202020;
+    }
+
+    a:visited {
+        /* font: 400 1.1em "Roboto", sans-serif;
+        font-style: italic; */
+        color: #202020;
+    }
+
+
+
+    
+</style>
+
+</html>
