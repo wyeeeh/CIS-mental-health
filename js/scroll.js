@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Define your array of colors
   // var ColorList = ['#FFFFFF','#F5DFF6', '#FFF9F9','#D6ECD5','FFE7CC'];
-  var ColorList = ['#FFFFFF','#FFF9F9'];
+  var ColorList = ['#FFFFFF','#FFF9F9','#FFF9F9'];
 
 
   // Get the tipbox and underline span
