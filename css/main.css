@@ -1,13 +1,13 @@
 body{
-    background-color: #FFF;
+    background-color: #ffffff;
     font-family: 'Roboto','Playfair Display', 'Inter',"Helvetica", "Arial", sans-serif;
     font-size: 14px;
     height: 100%;
-    width: 95%;
     margin: 0;
     padding: 1.5em;
     color: #202020;
-    transition: background-color 0.1s ease; /* 添加过渡效果 */
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
+    
 }
 
 
@@ -67,13 +67,23 @@ body{
     z-index: 0;
     display: flex;
 }
-.bg-img {
+.bg-svg {
   position: fixed;
   top: 100px;   /* 50px above the page */
   right: -200px; /* 400px on the right side (negative value) */ 
+  left: -1.5em;
   overflow: hidden;
   z-index: -1;
 }
+
+.bg-img {
+    position: fixed;
+    top: 20em;   /* 50px above the page */
+    right: -1em; /* 400px on the right side (negative value) */
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0.8;
+  }
 
 
 .tipbox {
@@ -81,7 +91,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(217, 217, 217, 0.5);
+    background: rgba(240, 240, 240, 0.8);
     padding: 1em;
     width: 600px;
     border-top-left-radius: 0.8em;
@@ -123,7 +133,7 @@ body{
 
 .flex-container {
     display: grid;
-    grid-template-columns: 1.4fr 0.6fr;
+    grid-template-columns: 1.2fr 0.8fr;
     justify-content: center;
     align-items: center;
 }
@@ -132,8 +142,9 @@ body{
     display: grid;
     justify-content: center;
     align-items: center;
+    place-items: center;
     row-gap: 2em;
-    padding: 1em 0 1em 0;
+    padding: 1em;
     /* min-width: 950px; */
     /* background: rgba(217, 217, 217, 0.5);
     padding: 1em;
@@ -144,6 +155,15 @@ body{
     border-bottom-right-radius: 0.8em;
     overflow: hidden;
     font: 400 1.2em "Roboto", sans-serif; */
+    
+}
+
+.main-container{
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
 }
 
 
@@ -157,7 +177,7 @@ body{
 
 .chart-title embed {
     grid-column: 1;
-    margin: 0 0.5em 0 0;
+    margin: 0 0.2em 0 0;
 }
 
 .chart-title span {
@@ -174,6 +194,7 @@ body{
     color: #202020;
     text-decoration: none;
     line-height: 1.5em;
+    width: 991px;
 }
 
 a:hover {
@@ -185,6 +206,54 @@ a:active {
     /* font: 400 1.1em "Roboto", sans-serif;
     font-style: italic; */
     color: #202020;
+}
+
+a:visited {
+    /* font: 400 1.1em "Roboto", sans-serif;
+    font-style: italic; */
+    color: #202020;
+}
+
+.button {
+    margin: 6em 0 6em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 200px; /* side_bar的最低宽度 */
+  background: rgba(255,255,255,1);
+  outline: 3px solid rgba(239,240,246,1);
+  box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.1);
+
+    padding: 1em;
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+    border-bottom-left-radius: 0.8em;
+    border-bottom-right-radius: 0.8em;
+    overflow: hidden;
+    font: 700 1.25em "Roboto", sans-serif;
+    color: rgba(27,89,248,1) !important;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: rgba(27,89,248,0.1);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    outline: 2px solid rgba(27,89,248,0.1);
+    box-shadow: 0px 3px 15px rgba(27,89,248, 0.2);
+    font-weight: 700;
+    color: rgba(27,89,248,1) !important;
+    /* outline: 2px solid rgb(0, 0, 0); */
+    cursor: pointer;
+  }
+
+.button a:active {
+    /* font: 400 1.1em "Roboto", sans-serif;
+    font-style: italic; */
+    color: rgba(27,89,248,1) !important;
 }
 
 a:visited {

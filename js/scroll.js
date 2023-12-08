@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // Get the tipbox and underline span
   // var tipbox = document.querySelector('.tipbox');
   var underlineSpan = document.querySelector('#underline');
+  var underlineSpan2 = document.querySelector('#underline2');
+  var underlineSpan3 = document.querySelector('#underline3');
 
 
 
@@ -26,15 +28,25 @@ document.addEventListener("DOMContentLoaded", function() {
         const interpolationPercentage = ((scrollPercentage % (100 / (ColorList.length - 1))) / (100 / (ColorList.length - 1)));
 
         // Interpolate the color
-        const interpolatedColor = interpolateColor(color1, color2, interpolationPercentage);
+        const interpolatedColor = interpolateColor(color1, color2, interpolationPercentage, 0.9);
 
         // Set the background color
         document.body.style.backgroundColor = interpolatedColor;
+        // document.getElementById("container").style.backgroundColor = interpolatedColor;
+
+        // select by class name "main-container"
+        // 获取所有具有 "main-container" 类名的元素
+        var elements = document.getElementsByClassName("chart-container main-container");
+
+        // 遍历所有元素并修改颜色
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.backgroundColor = interpolatedColor;
+            }
 
     // // Start the underline animation
 
     // Check if the scroll position is within the range of the tipbox
-    if (scrollPercentage >= 90 && scrollPercentage <= 200) {
+    if (scrollPercentage >= 55 && scrollPercentage <= 70) {
       underlineSpan.classList.add('underline');
       console.log(scrollPercentage)
       console.log(underlineSpan);
@@ -43,10 +55,40 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(scrollPercentage)
       console.log(underlineSpan);
     }
+
+
+      // Check if the scroll position is within the range of the tipbox
+      if (scrollPercentage >= 85 && scrollPercentage <= 200) {
+        underlineSpan2.classList.add('underline');
+        console.log(scrollPercentage)
+        console.log(underlineSpan2);
+      } else {
+        underlineSpan2.classList.remove('underline');
+        console.log(scrollPercentage)
+        console.log(underlineSpan2);
+      }
+
+
+            // Check if the scroll position is within the range of the tipbox
+    // if (scrollPercentage >= 90 && scrollPercentage <= 200) {
+    //   underlineSpan3.classList.add('underline');
+    //   console.log(scrollPercentage)
+    //   console.log(underlineSpan3);
+    // } else {
+    //   underlineSpan3.classList.remove('underline');
+    //   console.log(scrollPercentage)
+    //   console.log(underlineSpan3);
+    // }
+
+
+
   });
 
+
+  
+
 // Function to interpolate between two colors based on a percentage
-function interpolateColor(color1, color2, percentage) {
+function interpolateColor(color1, color2, percentage, alpha) {
   const c1 = hexToRgb(color1) || { r: 0, g: 0, b: 0 };
   const c2 = hexToRgb(color2) || { r: 255, g: 255, b: 255 };
 
@@ -54,7 +96,7 @@ function interpolateColor(color1, color2, percentage) {
   const g = Math.round(c1.g + (c2.g - c1.g) * percentage);
   const b = Math.round(c1.b + (c2.b - c1.b) * percentage);
 
-  return `rgb(${r}, ${g}, ${b})`;
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
 // Function to convert hex color to RGB
