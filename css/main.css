@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Hey August";
+    src: url("../font/hey_august/Hey\ August.otf") format("opentype");
+    /* font-style: oblique;
+    font-weight: normal; */
+  }
+
+
 body{
     background-color: #ffffff;
     font-family: 'Roboto','Playfair Display', 'Inter',"Helvetica", "Arial", sans-serif;
@@ -69,19 +77,12 @@ body{
     z-index: 0;
     display: flex;
 }
-.bg-svg {
-  position: fixed;
-  top: 100px;   /* 50px above the page */
-  right: -200px; /* 400px on the right side (negative value) */ 
-  left: -1.5em;
-  overflow: hidden;
-  z-index: -1;
-}
+
 
 .bg-img {
     position: fixed;
-    top: 20em;   /* 50px above the page */
-    right: -1em; /* 400px on the right side (negative value) */
+    top: 26em;   /* 50px above the page */
+    right: -8em; /* 400px on the right side (negative value) */
     overflow: hidden;
     z-index: -1;
     opacity: 0.8;
@@ -93,41 +94,71 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(240, 240, 240, 0.8);
+    background: rgba(240, 240, 240, 0.95);
     padding: 1em;
     width: 100%;
     max-width: 35vw; /* 不超过父容器宽度 */
+    min-width: 250px;
     border-top-left-radius: 0.8em;
     border-top-right-radius: 0.8em;
     border-bottom-left-radius: 0.8em;
     border-bottom-right-radius: 0.8em;
     overflow: hidden;
     font: 400 1.25em "Roboto", sans-serif;
+    z-index: 10;
 }
-
-.tipbox > span {
+.tipbox .highlight {
     position: relative;
     display: inline-block;
+    font-family: 'Kalam';
+    font-weight: 700; 
+    color: #C11F1F; 
+    font-size: 1em;
     /* transition: font-weight 0.8s ease;  */
     /* transition: color 0.8s ease; */
-
 }
-.tipbox > span::before {
+
+.tipbox .highlight::before {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 0.1em;
     width: 0;
-    height: 2px;
+    height: 0.1em;
     background-color: #C11F1F;
     transition: width 0.8s ease; /* 添加过渡效果 */
 }
 
-.tipbox .underline {
-    font-style: italic; 
-    font-weight: 900; 
+/* .tipbox > span {
+    position: relative;
+    display: inline-block;
+    font-family: 'Kalam';
+    font-weight: 700; 
     color: #C11F1F; 
+    font-size: 1.1em;
+    /* transition: font-weight 0.8s ease;  */
+    /* transition: color 0.8s ease; */
 
+/* } */
+
+/* .tipbox > span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.1em;
+    width: 0;
+    height: 0.1em;
+    background-color: #C11F1F;
+    transition: width 0.8s ease; /* 添加过渡效果 */
+/* } */ 
+
+/* .tipbox > span:hover::before {
+    width: 100%;
+} */
+
+
+.tipbox .underline {
+    color: #C11F1F; 
 }
 
 .tipbox .underline::before {
@@ -175,8 +206,10 @@ body{
     display: grid;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font: 800 1.8em "Roboto Condensed", sans-serif;
     white-space: initial;
+    /* max-width: 40em; */
 }
 
 .chart-title embed {
@@ -225,8 +258,8 @@ a:visited {
     align-items: center;
 
     background: rgba(255,255,255,0.9);
-    outline: 0.2em solid rgba(239,240,246,0.9);
-    box-shadow: 0px 0.2em 1em rgba(0, 0, 0, 0.1);
+    outline: 0.2em solid rgba(246, 239, 239, 0.9);
+    box-shadow: 0px 0.2em 1em  rgba(246, 239, 239, 0.1);
 
     padding: 1em;
     border-top-left-radius: 0.8em;
@@ -235,20 +268,20 @@ a:visited {
     border-bottom-right-radius: 0.8em;
     overflow: hidden;
     font: 700 1.25em "Roboto", sans-serif;
-    color: rgba(27,89,248,1) !important;
+    color: rgba(193, 31, 31,1) !important;
     text-decoration: none;
 }
 
 .button:hover {
     /* background: rgba(27,89,248,0.1); */
-    background-color: rgba(231, 238, 255, 0.9);
+    background-color: rgba(255, 185, 185, 0.9);
     border-top-left-radius: 0.8em;
     border-top-right-radius: 0.8em;
     border-bottom-left-radius: 0.8em;
     border-bottom-right-radius: 0.8em;
-    outline: 0.2em solid rgba(27,89,248,0.1);
-    box-shadow: 0px 0.2em 1em  rgba(27,89,248, 0.1);
-    color: rgba(27,89,248,1) !important;
+    outline: 0.2em solid rgba(246, 239, 239, 0.9);
+    box-shadow: 0px 0.2em 1em  rgba(246, 239, 239, 0.1);
+    color: rgba(193, 31, 31,1) !important;
     /* outline: 2px solid rgb(0, 0, 0); */
     cursor: pointer;
   }
@@ -256,11 +289,25 @@ a:visited {
 .button a:active {
     /* font: 400 1.1em "Roboto", sans-serif;
     font-style: italic; */
-    color: rgba(27,89,248,1) !important;
+    color: rgba(246, 239, 239, 1) !important;
 }
 
 a:visited {
     /* font: 400 1.1em "Roboto", sans-serif;
     font-style: italic; */
     color: #202020;
+}
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+.sticky-chart {
+    position: -webkit-sticky;
+    position: sticky; 
+    row-gap: 2em;
+    /* z-index: -2; */
+    /* transition: all 0.2s ease-in; */
 }

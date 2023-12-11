@@ -21,13 +21,14 @@
     <!-- import js -->
     <script src="../js/d3.v7.js"></script>
     <script src="../js/d3-format.v2.min.js"></script>
-    <!-- <script src="../js/home_js/pyramid_bar_chart.js"></script> -->
+    <script src="../../../js/flourish.js"></script>
+    <!-- <script src="../js/pyramid_bar_chart.js"></script> -->
 
   </head>
   <body>
     <div class="intro">
       <div class="headline">
-        Tracking Mental Health of International Students in the United States 
+        Student Mental Health Tracker
       </div>
       
       <span>
@@ -37,14 +38,14 @@
       </span>
       <span>
         💡 <b>Quick Start Guide</b>
-        <br> Check out our highlighted findings <a href="#chart" style="color:#ffffff; background-color: rgba(142, 176, 255, 0.5); border-radius: 5px; padding: 3px 3px 3px 6px">below↓</a> or click on the side buttons to explore the data maps yourself.
+        <br> Check out our highlighted quick facts <a href="#chart" style="color:#ffffff; background-color: rgba(142, 176, 255, 0.5); border-radius: 5px; padding: 3px 3px 3px 6px">below↓</a> or click on the side buttons to explore available mental health resources.
       </span> 
 
-      <span>
+      <!-- <span>
         🧭 <b>Data Source</b>
         <li><a href="https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health" target="_blank" style="color:#ffffff;"> National Survey on Drug Use and Health</a></li>
         <li><a href="https://opendoorsdata.org/annual-release/international-students/#" target="_blank" style="color:#ffffff;"> Open Doors</a></li>
-      </span>
+      </span> -->
       
       <span>
         👩‍💻 <b>Contributor</b>
@@ -57,71 +58,74 @@
     <div class="two-cols-box" id="chart">
       <div class="kpi">
         <div class="left">
-          <div class="title"># of International Students</div>
-          <div class="number">1,057,188</div>
-          <div class="caption">Number of International Students in the U.S.</div>
+          <div class="title">Total Intl. Students</div>
+          <div class="number">13,056</div>
+          <div class="caption">International Students on Campus</div>
         </div>
         
         <div class="right">
-          <div class="title">Depression Among US Students</div>
-          <div class="number">17.8%</div>
-          <div class="caption">Average Depression Rate Among U.S. Students</div>
+          <div class="title">% of Intl. Students</div>
+          <div class="number">26.6%</div>
+          <div class="caption">Percentage of International Students on Campus</div>
         </div>
 
         <div class="left">
-          <div class="title">Depression Among International Students</div>
-          <div class="number">25.6%</div>
-          <div class="caption">Average Depression Rate Among U.S. Students</div>
+          <div class="title">Students Counselled</div>
+          <div class="number">7,491</div>
+          <div class="caption">Students Received Counseling in Last 12 Months</div>
+
         </div>
 
         <div class="right">
-          <div class="title">Health Resource Utilization Rate</div>
-          <div class="number">4.2%</div>
-          <div class="caption">Internatioanl Students Seeking On-Campus Mental Health Support</div>
+          <div class="title">Counseling Rate</div>
+          <div class="number">1 in 6</div>
+          <div class="caption">Students Come for Counseling in Last 12 Months</div>
+
         </div>
 
         <div class="left">
-          <div class="title">Student-to-Counsellor Ratio</div>
-          <div class="number">850:1</div>
-          <div class="caption">The Ratio of Students to Mental Health Counsellors in the Campus</div>
+          <div class="title">Total Counselors</div>
+          <div class="number">68</div>
+          <div class="caption">Numbers of Mental Health Counselors on Campus</div>
         </div>
 
         <div class="right">
-          <div class="title">Counsellors Available</div>
-          <div class="number">75/120</div>
-          <div class="caption">The Ratio of Student to Counsellor</div>
+          <div class="title">Student-Counselor Ratio</div>
+          <div class="number">728:1</div>
+          <div class="caption">Numbers of Students Per Mental Health Counselor</div>
         </div>
 
       </div>
+
+
+
       <div class="chart_box">
-        <div class="title" style="text-align: center;">Mental Health Counsellors Per 100 International Students in Different States</div>
-        <!-- <div id="bar_chart"></div> -->
-        <div style="width: 100%; height: 100%; display: grid; grid-template-columns: calc(100% - 30px) 20px; place-items: center;">
-          <div id="polar_chart"></div>
-          <script type="text/javascript" src="../js/home_js/polar_chart.js">
-          </script>
-          <div style="width: 30px;"><text style="color: #888888; writing-mode: vertical-lr">👈 drag it! </text>
-          </div>
-        </div>
+        <div class="title" style="text-align: center;">Distress Level of Intl Students by Origin</div>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/16080969" style="height: 100%; width: 100%;"></div>
       </div>
+
     </div>
 
     <div class="one-col-box">
       <div class="chart_box">
         <div class="title">Depression Rate of Students by Origin</div>
         <div id="donut_chart"></div>
-        <script src="../js/home_js/donut_chart.js"></script>
+        <script src="../js/donut_chart.js"></script>
         <!-- <div class = "caption" style = "width: 80%; margin: 20px 0 0 0;">AIAN = American Indian or Alaska Native; Black = Black or African American; Hispanic = Hispanic or Latino; NH = Not Hispanic or Latino; NHOPI = Native Hawaiian or Other Pacific Islander; Multiple = Multiple Race.</div> -->
       </div>
     </div>
+
+
     <div class="one-col-box">
       <div class="chart_box">
         <div class="title">Mental Health Symptons Reported by Students Overtime</div>
         <div id="heat_map"></div>
-        <script src="../js/home_js/heat_map.js"></script> 
+        <script src="../js/heat_map.js"></script> 
         <div style="color: #888888">👆 drag it!</div>
       </div>
     </div>
+
+    
   
   </body>
 </html>

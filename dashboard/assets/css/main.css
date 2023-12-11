@@ -30,7 +30,7 @@ body {
   overflow: hidden;
   /* grid mode */
   display: grid;
-  grid-template-rows: 80px 300px;
+  grid-template-rows: 80px 200px;
   row-gap: 60px;
 }
 

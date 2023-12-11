@@ -36,19 +36,11 @@
         <div class="nav_box">
             <div class="nav_item highlighted" chart="homepage">
                 <embed src="./assets/img/chart.svg" height="25px" type="image/svg+xml"/>
-                <span class="side_bar_text">Overview</span>
+                <span class="side_bar_text">Tracker</span>
             </div>
-            <div class="nav_item" chart="part1">
-                <embed src="./assets/img/map.svg" height="25px" type="image/svg+xml"/>
-                <span class="side_bar_text">Explore States</span>
-            </div>
-            <div class="nav_item" chart="part2">
+            <div class="nav_item" chart="resource">
                 <embed src="./assets/img/hospital.svg" height="25px" type="image/svg+xml"/>
                 <span class="side_bar_text">Health Resources</span>
-            </div>
-            <div class="nav_item" chart="part3">
-                <embed src="./assets/img/timeline.svg" height="25px" type="image/svg+xml"/>
-                <span class="side_bar_text">Timeline</span>
             </div>
             <div class="nav_item" chart="about">
               <embed src="./assets/img/about.svg" height="25px" type="image/svg+xml"/>
@@ -75,12 +67,8 @@
             // 更新 iframe 的 src 属性
             if (chartType === "homepage") {
               $(".canvas .chart_box iframe").attr("src", "./assets/html/home.html");
-            } else if (chartType === "part1") {
-              $(".canvas .chart_box iframe").attr("src", "./assets/html/mental_states.html");
-            } else if (chartType === "part2") {
-              $(".canvas .chart_box iframe").attr("src", "./assets/html/mental_resource.html");
-            } else if (chartType === "part3") {
-              $(".canvas .chart_box iframe").attr("src", "./assets/html/mental_trend.html");
+            } else if (chartType === "resource") {
+              $(".canvas .chart_box iframe").attr("src", "./assets/html/resource.html");
             } else if (chartType === "about") {
               $(".canvas .chart_box iframe").attr("src", "./assets/html/about.html");
             }

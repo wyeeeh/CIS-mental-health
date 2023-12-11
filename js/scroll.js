@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Define your array of colors
-  // var ColorList = ['#FFFFFF','#F5DFF6', '#FFF9F9','#D6ECD5','FFE7CC'];
-  var ColorList = ['#FFFFFF','#FFF9F9','#FFF9F9'];
+  var ColorList = ['#FFFFFF','#fff9f3', '#fff3f3'];
+  // var ColorList = ['#FFFFFF','#FFF9F9','#ffbe98'];
 
 
   // Get the tipbox and underline span
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // // Start the underline animation
 
     // Check if the scroll position is within the range of the tipbox
-    if (scrollPercentage >= 55 && scrollPercentage <= 70) {
+    if (scrollPercentage >= 32 && scrollPercentage <= 100) {
       underlineSpan.classList.add('underline');
       console.log(scrollPercentage)
       console.log(underlineSpan);
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
       // Check if the scroll position is within the range of the tipbox
-      if (scrollPercentage >= 85 && scrollPercentage <= 200) {
+      if (scrollPercentage >= 90 && scrollPercentage <= 200) {
         underlineSpan2.classList.add('underline');
         console.log(scrollPercentage)
         console.log(underlineSpan2);
